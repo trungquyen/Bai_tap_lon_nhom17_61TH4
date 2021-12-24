@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <header>
+    <header class="fixed-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <nav class="navbar navbar-light">
+                    <nav class="navbar navbar-light py-0">
                         <div class="navbar-header w-100 px-0">
                             <a class="navbar-brand">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -45,7 +45,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mt-3 ps-0">
@@ -136,40 +136,42 @@
                                     <div class="col-md-4">
                                         <select name="Day" class="form-control">
                                             <option selected value="">Day</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                            <?php
+                                                for($i=1;$i<=31;$i++)
+                                                {
+                                                    echo '<option value='.$i.'>'.$i.'</option>';
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                     <!-- Tháng -->
                                     <div class="col-md-4 px-0">
                                         <select class="form-control" name="Month">
-                                            <option selected value="">Month</option>
-                                            <option value="">January</option>
-                                            <option value="">February</option>
-                                            <option value="">March</option>
-                                            <option value="">April</option>
-                                            <option value="">June</option>
-                                            <option value="">July</option>
-                                            <option value="">8</option>
-                                            <option value="">September</option>
-                                            <option value="">October</option>
-                                            <option value="">November</option>
-                                            <option value="">December</option>
+                                            <option value="Month">Month</option>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="Mars">Mars</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
                                         </select>
                                     </div>
                                     <!-- Năm -->
                                     <div class="col-md-4">
-                                        <select name="Year" class="form-control">
+                                        <select class="form-control" name="Year">
                                             <option selected value="">Year</option>
-                                            <option value="">1980</option>
-                                            <option value="">1981</option>
-                                            <option value="">1982</option>
-                                            <option value="">1983</option>
-                                            <option value="">1984</option>
-                                            <option value="">1985</option>
+                                            <?php
+                                                for($i=2000;$i<=2025;$i++)
+                                                {
+                                                    echo '<option value='.$i.'>'.$i.'</option>';
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>

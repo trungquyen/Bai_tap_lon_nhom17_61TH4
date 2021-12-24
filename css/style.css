@@ -50,12 +50,14 @@
 
 .link-download__img-button {
     display: block;
+    color: #5181b8;
     margin: 10px 0 0 20px;
 }
 
 .link-download__img-button:hover {
+    color: #5181b8;
+    border-radius: 2px;
     background-color: #cccccc;
-    border-radius: 8px;
 }
 
 .link-product a{
@@ -78,6 +80,11 @@
     color: #2a5f88;
     font-size: 14px;
     text-decoration: none;
+}
+
+.main__footer a:hover{
+    color: #2a5f88;
+    text-decoration: underline;
 }
 
 /* Trang News */
