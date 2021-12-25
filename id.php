@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fixed-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 px-0">
@@ -69,10 +69,47 @@
                                 <i class="bi bi-grid-3x3-gap-fill"></i>
                             </a>
 
-                            <a href="" class="header__camera">
-                                <img src="images/camera.png" alt="" class="header__camera--img">
-                                <i class="header__camera--icon bi bi-caret-down-fill"></i>
-                            </a>
+                            <div class="btn-group">
+                                <a type="button" class="btn header__camera" style="color: #adb5bd" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/camera.png" alt="" class="header__camera--img">
+                                    <i class="header__camera--icon bi bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <div class="camera--item">
+                                            <a href="" class="camera__avatar">
+                                                <img src="assets/images/camera.png" alt="" class="camera--img">
+                                                <div class="camera--text">
+                                                    <span class="d-block">Trung Quyền</span>
+                                                    <span class="d-block" style="color: #0d6efd">VK ID settings</span>
+                                                </div>
+                                            </a>
+                                            <div class="camera__button">
+                                                <a href="" class="camera__button-link">
+                                                    <span class="camera__button-label">VK Pay</span>
+                                                    <span class="camera__button-label" style="color: #0d6efd">Open</span>
+                                                </a>
+                                                <a href="" class="camera__button-link">
+                                                    <span class="camera__button-label">VK Combo</span>
+                                                    <span class="camera__button-label" style="color: #0d6efd">More</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="bi bi-gear pe-1" style="color: #0d6efd"></i>
+                                        Settings
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="bi bi-question-circle pe-1" style="color: #0d6efd"></i>
+                                        Help
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="bi bi-arrow-bar-right pe-1" style="color: #0d6efd"></i>
+                                        Sign out
+                                    </a></li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -80,7 +117,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="mt-5">
         <div class="container">
             <div class="row">
 
