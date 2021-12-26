@@ -1,3 +1,11 @@
+<?php
+    // trước khi cho người dùng vào bên trong
+    // phải kiểm tra thẻ làm việc
+    session_start();
+    if (!isset($_SESSION['isLoginOK'])){
+        header("location:vk.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,10 +86,15 @@
                                     <li>
                                         <div class="camera--item">
                                             <a href="" class="camera__avatar">
-                                                <img src="assets/images/camera.png" alt="" class="camera--img">
+                                                <img src="images/camera.png" alt="" class="camera--img">
                                                 <div class="camera--text">
-                                                    <span class="d-block">Trung Quyền</span>
-                                                    <span class="d-block" style="color: #0d6efd">VK ID settings</span>
+                                                    <?php
+                                                        if (isset($_SESSION['isLoginOK']))
+                                                        {
+                                                            echo '<span class="d-block">'.$_SESSION['isLoginOK'].'</span>';
+                                                            echo '<span class="d-block" style="color: #0d6efd">VK ID settings</span>';
+                                                        }
+                                                    ?>
                                                 </div>
                                             </a>
                                             <div class="camera__button">
@@ -104,10 +117,15 @@
                                         <i class="bi bi-question-circle pe-1" style="color: #0d6efd"></i>
                                         Help
                                     </a></li>
-                                    <li><a class="dropdown-item" href="#">
-                                        <i class="bi bi-arrow-bar-right pe-1" style="color: #0d6efd"></i>
-                                        Sign out
-                                    </a></li>
+                                    <?php
+                                        if (isset($_SESSION['isLoginOK']))
+                                        {
+                                            echo '<li><a class="dropdown-item" href="signout.php">';
+                                            echo '<i class="bi bi-arrow-bar-right pe-1" style="color: #0d6efd"></i>';
+                                            echo 'Sign out';
+                                            echo '</a></li>';
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>

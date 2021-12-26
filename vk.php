@@ -81,22 +81,23 @@
                 <div class="col-md-4 mt-3">
 
                     <div class="form-horizontal">
-                        <form action="">
+                        <form action="process-signin.php" method="post">
                             <div class="col-md-8 mt-4 mb-3 w-100">
-                                <input type="email" type="number" placeholder="Phone or email"
-                                    id="form1Example1" class="form-control" />
+                                <input type="email" placeholder="Phone or Email"
+                                    id="txtEmail" name="txtEmail" class="form-control" required autofocus/>
                             </div>
     
                             <!-- Password input -->
                             <div class="col-md-8 mb-3 w-100">
-                                <input type="password" placeholder="Password" id="form1Example2" class="form-control" />
+                                <input type="password" placeholder="Password" 
+                                    id="txtPass" name="txtPass" class="form-control" required/> 
                             </div>
     
                             <!-- 2 column grid layout for inline styling -->
                             <div class="row mb-4 d-flex">
                                 <div class="col">
                                     <!-- Submit button -->
-                                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                    <button type="submit" class="btn btn-primary btn-block" name="btnSignIn">Sign in</button>
                                     <!-- Simple link -->
                                     <a href="#" class="d-block">Forgot your password?</a>
                                 </div>
